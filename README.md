@@ -43,7 +43,7 @@ A full-stack recipe assistant that integrates an LLM-powered chatbot with a Retr
 * FAISS Vector Search
 * Cosine Similarity
 
-### Future Enhancements
+## Future Enhancements
 
 * Multi-user support with personalized recipe collections
 * Conversation memory for contextual recommendations

@@ -1,0 +1,297 @@
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background: #060208;
+  color: white;
+}
+
+
+#header {
+  padding: 40px 30px;
+  text-align: center;
+  background: linear-gradient(90deg, #060208, #c422ae);
+  box-shadow: 0 4px 25px rgba(189, 115, 179, 0.35);
+}
+
+#header h2 {
+  margin: 0;
+  font-size: 3rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+#header > p {
+  max-width: 850px;
+  margin: 15px auto;
+  color: #e9d5ff;
+  line-height: 1.7;
+}
+
+#userDetails {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+#userDetails p {
+  margin: 0;
+  padding: 12px 20px;
+
+  background: rgba(226, 135, 199, 0.08);
+
+  border: 1px solid rgba(221, 143, 200, 0.12);
+
+  border-radius: 12px;
+
+  backdrop-filter: blur(10px);
+
+  color: white;
+
+  font-size: 14px;
+}
+
+#page {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: 20px;
+  padding: 20px;
+}
+
+
+
+#dish {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+#dish > div {
+  background: rgba(255,255,255,0.05);
+
+  border: 1px solid rgba(255,255,255,0.08);
+
+  border-radius: 18px;
+
+  padding: 20px;
+
+  backdrop-filter: blur(12px);
+
+  transition: 0.3s ease;
+
+  cursor: pointer;
+}
+
+#dish > div:hover {
+  transform: translateY(-5px);
+
+  border-color: #c422ae;
+
+  box-shadow: 0 10px 30px rgba(255,255,255,0.1);
+}
+
+#dish > div p:first-child {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 12px;
+}
+
+#dish > div p:last-child {
+  color: #d1d5db;
+  line-height: 1.6;
+}
+
+#chatbotANDdisplay {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 250px);
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 10px;
+  backdrop-filter: blur(15px);
+  padding: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(196,34,174,0.25);
+}
+
+#backToChatbot {
+  margin-top: auto;
+  align-self: center;
+
+  padding: 12px 24px;
+  border: none;
+  border-radius: 12px;
+
+  background: linear-gradient(135deg, #ff4ecd, #9d4edd);
+  color: white;
+
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+#chatbotANDdisplay textarea {
+  border: none;
+  resize: none;
+  width: 97%;
+  min-height: 20px;
+  max-height: 30px;
+  padding: 16px;
+  background: rgba(255,255,255,0.08);
+  color: white;
+  font-size: 15px;
+  outline: none;
+  margin:0;
+}
+
+#chatbotANDdisplay textarea::placeholder {
+  color: #cbd5e1;
+}
+
+#chatANDdish {
+  flex: 1;
+
+  overflow-y: auto;
+
+  padding: 20px;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 12px;
+}
+
+#recipes {
+    width: 100%;
+    max-width: 100vw;
+    max-height: 560px;
+
+    overflow-y: auto;
+    overflow-x: auto;
+
+    box-sizing: border-box;
+}
+
+#chatANDdish > div {
+  max-width: 75%;
+
+  padding: 12px 16px;
+
+  border-radius: 16px;
+
+  background: rgba(255,255,255,0.08);
+
+  color: white;
+
+  align-self: flex-start;
+
+  word-wrap: break-word;
+
+  line-height: 1.5;
+}
+
+#chatANDdish p {
+  margin: 0;
+  line-height: 1.8;
+}
+
+#chatANDdish::-webkit-scrollbar,
+#recipes::-webkit-scrollbar {
+  width: 6px;
+}
+
+#chatANDdish::-webkit-scrollbar-thumb,
+#recipes::-webkit-scrollbar-thumb {
+  background: #c422ae;
+  border-radius: 20px;
+}
+
+.userMsg {
+  align-self: flex-end !important;
+  background: #c422ae9f !important;
+}
+
+.assistantMsg {
+  align-self: flex-start !important;
+  background: rgba(255,255,255,0.08) !important;
+}
+
+#popup {
+  position: fixed;
+
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+
+  min-width: 320px;
+  max-width: 450px;
+
+  padding: 25px;
+
+  border-radius: 20px;
+
+  background: rgb(255, 255, 255);
+
+
+  border: 1px solid rgba(255,255,255,0.1);
+
+  color: rgb(0, 0, 0);
+
+  text-align: center;
+
+  z-index: 1000;
+
+  box-shadow:
+    0 10px 30px rgba(0,0,0,0.4);
+}
+
+#popup button {
+  margin-top: 20px;
+
+  border: none;
+  border-radius: 12px;
+
+  padding: 12px 25px;
+
+  background: linear-gradient(
+    135deg,
+    #ff4ecd,
+    #9d4edd
+  );
+
+  color: white;
+
+  cursor: pointer;
+
+  font-weight: 600;
+
+  transition: 0.3s;
+}
+
+#popup button:hover {
+  transform: translateY(-2px);
+}
+
+@media (max-width: 1000px) {
+  #page {
+    flex-direction: column;
+  }
+
+  #chatbot {
+    width: 100%;
+    min-width: auto;
+    height: 400px;
+  }
+
+  #dish {
+    grid-template-columns: 1fr;
+  }
+
+  #userDetails {
+    flex-direction: column;
+    align-items: center;
+  }
+}

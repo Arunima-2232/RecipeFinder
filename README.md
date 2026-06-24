@@ -46,7 +46,7 @@ A full-stack recipe assistant that integrates an LLM-powered chatbot with a Retr
 ## Future Enhancements
 
 * Multi-user support with personalized recipe collections
-* Conversation memory for contextual recommendations
+* Conversation memory for contextual recommendations (done)
 * Nutritional analysis and calorie estimation
 * Hybrid retrieval using metadata filtering and semantic search
 
